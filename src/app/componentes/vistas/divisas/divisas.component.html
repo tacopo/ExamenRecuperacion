@@ -1,1 +1,26 @@
-<p>divisas works!</p>
+<div class="container">
+  <h2>Cambia de divisas</h2>
+  <div class="container">
+    <h3>Euros a Libras</h3>
+    <mat-form-field>
+      <mat-label><mat-icon>euro</mat-icon></mat-label>
+      <input type="number" step="0.01" matInput [(ngModel)]="euros1" (change)="cambiarEurosLibras()">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label><mat-icon>currency_pound</mat-icon></mat-label>
+      <input matInput disabled [(ngModel)]="libras1" >
+    </mat-form-field>
+  </div>
+  <div class="container">
+    <h3>Libras a Euros</h3>
+    <mat-form-field>
+      <mat-label><mat-icon>currency_pound</mat-icon></mat-label>
+      <input type="number" step="0.01" matInput [(ngModel)]="libras2" (change)="cambiarLibrasEuros()">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label><mat-icon>euro</mat-icon></mat-label>
+      <input matInput disabled [(ngModel)]="euros2">
+    </mat-form-field>
+  </div>
+
+</div>

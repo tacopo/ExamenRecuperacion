@@ -12,6 +12,8 @@ import { NavbarComponent } from './componentes/componentes/navbar/navbar.compone
 import { FooterComponent } from './componentes/componentes/footer/footer.component';
 import { CardComponent } from './componentes/componentes/card/card.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { CardComponent } from './componentes/componentes/card/card.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,14 +2,28 @@
 
 $font-primary: 'Montserrat', sans-serif;
 $font-secondary: 'Merriweather', serif;
+$font-menus: 'EB Garamond', serif;
 
 @mixin fuenteTitulos($tamaño)
 {
   font-family: $font-primary !important;
-  color: $secondary !important;
+  font-size: $tamaño !important;
+  color: $primary !important;
+
 }
 
 @mixin fuenteTextos($tamaño){
   font-family: $font-secondary !important;
+  color: $primary !important;
+  font-size: $tamaño !important;
+  line-height: 2;
+
+}
+
+@mixin fuenteMenu($tamaño)
+{
+  font-family: $font-menus !important;
   color: $secondary !important;
+  font-size: $tamaño !important;
+
 }

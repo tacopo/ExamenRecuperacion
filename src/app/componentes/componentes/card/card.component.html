@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <h2>{{ nombre }}</h2>
+  </mat-card-header>
+
+  <div class="container">
+    <img
+      mat-card-image
+      alt="{{ nombre }}"
+      srcset="
+        assets/Images/1000w/{{imagen}} 1000w,
+        assets/Images/700w/{{imagen}}   700w,
+        assets/Images/300w/{{imagen}}   300w
+      "
+    />
+  </div>
+
+  <mat-card-content>
+    <p>{{ descripcion }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a href="{{ enlace }}" target="_blank"
+      ><button mat-button><mat-icon>add</mat-icon></button></a
+    >
+  </mat-card-actions>
+</mat-card>

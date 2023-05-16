@@ -1,23 +1,234 @@
-@import 'fonts';
-@import 'colors';
-@import 'parallax';
-body
-{
-  background-color: lightgrey;
+@import "fonts";
+@import "colors";
+@import "parallax";
+
+/*
+---------------------------------generales--------------------------------------------------
+*/
+body {
+  background-color: $backgrounds;
 }
-h1{
+h1 {
   @include fuenteTitulos(40px);
-  text-align: center
+  text-align: center;
 }
-h2{
+h2 {
   @include fuenteTitulos(35px);
-  text-align: center
+  text-align: center;
 }
-h3{
+h3 {
   @include fuenteTitulos(30px);
-  text-align: center
+  text-align: center;
 }
-p{
+p {
   @include fuenteTextos(25px);
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+/*
+---------------------------------barra menu y pestañas------------------------------
+*/
+nav {
+  background-color: $backgrounds !important;
+}
+mat-toolbar {
+  background-color: $primary !important;
+  span {
+    @include fuenteMenu(50px);
+    text-align: center;
+    width: 100%;
+  }
+}
 
+.mdc-tab {
+  background-color: $primary;
+  span {
+    @include fuenteMenu(25px);
+  }
+  &:hover {
+    background-color: $backgroundResaltar;
+    span {
+      @include fuenteMenu(25px);
+      color: $primary;
+    }
+  }
+}
+.mat-mdc-tab-header {
+  background-color: $primary;
+}
+
+/*
+---------------------------------home component------------------------------
+*/
+#image1 {
+  @include paralax(
+    "https://www.civitatis.com/f/reino-unido/londres/guia/distritos.jpg"
+  );
+}
+#image2 {
+  @include paralax(
+    "https://elviajedesofi.s3.eu-west-3.amazonaws.com/wp-content/uploads/2022/07/11175646/londres-en-tres-dias.jpg"
+  );
+}
+#image3 {
+  @include paralax(
+    "https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1644775958/mzhb6vbb8n8w8rg9afwh.jpg"
+  );
+}
+#image4 {
+  @include paralax(
+    "https://www.civitatis.com/f/reino-unido/londres/tour-londres-antiguo-r32.jpg"
+  );
+}
+#image5 {
+  @include paralax(
+    "https://elviajista.com/wp-content/uploads/2021/05/dondealojarseenlondres.jpg"
+  );
+}
+#image6 {
+  @include paralax(
+    "https://www.educaborras.com/wp-content/uploads/19046_02.jpg"
+  );
+}
+/*
+---------------------------------gallery component------------------------------
+*/
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  #tarjetero {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    mat-card {
+      margin-bottom: 5%;
+    }
+  }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #tarjetero {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2%;
+    row-gap: 2%;
+  }
+}
+
+/* Estilos para escritorios */
+@media only screen and (min-width: 1024px) {
+  #tarjetero {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2%;
+    row-gap: 2%;
+  }
+}
+
+mat-card {
+  background-color: $primary !important;
+  h2 {
+    @include fuenteMenu(35px);
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-content {
+    p {
+      @include fuenteMenu(25px);
+    }
+  }
+  img {
+    width: 100%;
+  }
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75) !important;
+
+  a {
+    background-color: $backgroundResaltar;
+    border-radius: 3%;
+    button {
+      border-width: 50px !important;
+    }
+  }
+  a:hover {
+    background-color: $buttons;
+  }
+  &-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+/*
+---------------------------------divisas component------------------------------
+*/
+
+mat-form-field {
+  input {
+    background-color: $primary !important;
+    @include fuenteMenu(30px);
+  }
+}
+
+.mdc-text-field {
+  background-color: $primary !important;
+}
+
+/*
+---------------------------------footer------------------------------
+*/
+
+footer {
+  margin-top: 10%;
+  background-color: $primary !important;
+  @include fuenteMenu(25px);
+  color: $secondary;
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    color: $secondary;
+    &:hover {
+      color: $backgroundResaltar;
+    }
+  }
+  button {
+    background-color: $secondary !important;
+    &:hover {
+      background-color: $backgroundResaltar !important;
+      color: $buttons !important;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilos para tablets  y escritorio*/
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+}
