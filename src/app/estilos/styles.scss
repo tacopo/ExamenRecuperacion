@@ -1,0 +1,23 @@
+@import 'fonts';
+@import 'colors';
+@import 'parallax';
+body
+{
+  background-color: lightgrey;
+}
+h1{
+  @include fuenteTitulos(40px);
+  text-align: center
+}
+h2{
+  @include fuenteTitulos(35px);
+  text-align: center
+}
+h3{
+  @include fuenteTitulos(30px);
+  text-align: center
+}
+p{
+  @include fuenteTextos(25px);
+}
+

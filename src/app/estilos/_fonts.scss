@@ -1,0 +1,15 @@
+@import 'colors';
+
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Merriweather', serif;
+
+@mixin fuenteTitulos($tamaño)
+{
+  font-family: $font-primary !important;
+  color: $secondary !important;
+}
+
+@mixin fuenteTextos($tamaño){
+  font-family: $font-secondary !important;
+  color: $secondary !important;
+}

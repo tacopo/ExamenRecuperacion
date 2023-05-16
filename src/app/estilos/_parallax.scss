@@ -1,0 +1,44 @@
+//efecto parallax
+.image1 {
+  position:relative;
+  background: url("https://www.civitatis.com/f/reino-unido/londres/guia/distritos.jpg") no-repeat fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 500px;
+
+}
+
+.image2 {
+  position:relative;
+  background: url("https://elviajedesofi.s3.eu-west-3.amazonaws.com/wp-content/uploads/2022/07/11175646/londres-en-tres-dias.jpg") no-repeat fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.image3 {
+  position:relative;
+  background: url("https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1644775958/mzhb6vbb8n8w8rg9afwh.jpg") no-repeat fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 500px;
+}
+.content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+  z-index:2;
+
+}
